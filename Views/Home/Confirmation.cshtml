@@ -1,0 +1,22 @@
+﻿@*
+*@
+@{
+    ViewData["Title"] = "New Movie Added!";
+}
+
+@*imports the model from page models*@
+@model HiltonMovies.Models.MovieDatabase
+
+@*Displays a confirmation message based on the rating received from the user*@
+<div class="text-center">
+    @if (Model.Rating == "R")
+    {
+        <h1>I think you should find other forms of entertainment</h1>
+        <h4>What would your bishop say about @Model.Title?</h4>
+    }
+    else
+    {
+        <h1>New Movie Successfully Added!</h1>
+        <h4>Enjoy @Model.Title! Should be a good one.</h4>
+    }
+</div>
